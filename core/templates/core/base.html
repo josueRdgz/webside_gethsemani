@@ -11,17 +11,24 @@
 </head>
 <body>
 
-    <header>
-        <h1>Iglesia Presbiteriana Reformada Gethsemaní</h1>
-        <nav>
-            <a href="/">Inicio</a> |
-            <a href="#">Nosotros</a> |
-            <a href="#">Doctrina</a> |
-            <a href="#">Sermones</a> |
+   <header class="site-header">
+    <div class="header-container">
+        <div class="site-branding">
+            <h1 class="site-title">
+                Iglesia Presbiteriana Reformada Gethsemaní
+            </h1>
+            <p class="site-tagline">Soli Deo Gloria</p>
+        </div>
+
+        <nav class="site-nav">
+            <a href="/">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Doctrina</a>
+            <a href="#">Sermones</a>
             <a href="#">Contacto</a>
         </nav>
-        <hr>
-    </header>
+    </div>
+</header>
 
     <main>
         {% block content %}{% endblock %}
