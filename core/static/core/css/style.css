@@ -1,0 +1,50 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f9f9f9;
+}
+
+/* Layout */
+header,
+footer {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
