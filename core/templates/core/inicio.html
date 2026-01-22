@@ -10,4 +10,23 @@ Inicio | Iglesia Presbiteriana Reformada Gethsemaní
         Somos una iglesia presbiteriana reformada comprometida con la predicación fiel
         de la Palabra de Dios, la adoración reverente y la vida en comunidad.
     </p>
+
+    <section class="page-content">
+    <h2>Reflexión semanal</h2>
+
+    {% if reflection %}
+        <h3>{{ reflection.title }}</h3>
+        <p><em>{{ reflection.created }}</em></p>
+
+        <p>
+            {{ reflection.content|truncatewords:40 }}
+        </p>
+
+        <a href="{% url 'reflections:reflection_detail' reflection.slug %}">
+            Read full reflection →
+        </a>
+    {% else %}
+        <p>No hay reflexiones aún.</p>
+    {% endif %}
+</section>
 {% endblock %}

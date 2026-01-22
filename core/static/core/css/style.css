@@ -175,3 +175,17 @@ main {
 .site-footer a:hover {
     text-decoration: underline;
 }
+
+.reflection-scripture {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: #fdf6e3;
+    border-left: 4px solid #c9a24d;
+    font-style: italic;
+    color: #374151;
+}
+
+.reflection-content {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+}

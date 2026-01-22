@@ -1,10 +1,14 @@
 {% extends "core/base.html" %}
-
+{% url 'reflections:reflection_detail' reflection.slug %}
 {% block title %}{{ reflection.title }}{% endblock %}
 
 {% block content %}
 <article class="page-section">
     <h2>{{ reflection.title }}</h2>
+
+    <div class="reflection-scripture">
+        {{ reflection.scripture|linebreaks }}
+    </div>
 
     <p style="font-size: 0.9rem; color: #6b7280;">
         {{ reflection.published_date }}
@@ -12,6 +16,22 @@
 
     <div style="margin-top: 2rem;">
         {{ reflection.content|linebreaks }}
+    </div>
+
+    {{ reflection.content|linebreaks }}
+
+    <div class="reflection-nav">
+        {% if previous_reflection %}
+            <a href="{% url 'reflections:reflection_detail' previous_reflection.slug %}">
+                ← Previous
+            </a>
+        {% endif %}
+
+        {% if next_reflection %}
+            <a href="{% url 'reflections:reflection_detail' next_reflection.slug %}">
+                Next →
+            </a>
+        {% endif %}
     </div>
 </article>
 {% endblock %}

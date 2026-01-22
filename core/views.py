@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from reflections.models import Reflection
 
 
 def inicio(request):
-    return render(request, 'core/inicio.html')
+    reflection = (
+        Reflection.objects
+        .filter(is_published=True)
+        .first()
+    )
+    return render(request, 'core/inicio.html', {
+        'reflection': reflection
+    })
 
 
 def nosotros(request):

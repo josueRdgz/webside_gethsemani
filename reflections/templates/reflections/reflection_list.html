@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+{% url 'reflections:reflection_list' %}
 {% block title %}Reflexiones semanales{% endblock %}
 
 {% block content %}
@@ -8,7 +9,7 @@
     {% for reflection in reflections %}
         <article style="margin-bottom: 2rem;">
             <h3>
-                <a href="{% url 'reflection_detail' reflection.slug %}">
+                <a href="{% url 'reflections:reflection_detail' reflection.slug %}">
                     {{ reflection.title }}
                 </a>
             </h3>

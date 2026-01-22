@@ -4,13 +4,20 @@ from django.utils.text import slugify
 
 
 class Reflection(models.Model):
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=220, unique=True, blank=True)
-    content = models.TextField()
-    published_date = models.DateField()
-    created = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=200, verbose_name="Título")
+    slug = models.SlugField(unique=True,
+                            blank=True,
+                            help_text="Automáticamente generado a partir del título."
+                            )
+    scripture = models.TextField(
+        verbose_name="Texto bíblico",
+        help_text="Ejemplo: Salmo 23:1–4 o el texto completo"
+    )
+    content = models.TextField(verbose_name="Cuerpo de la Reflexión")
+    published_date = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date")
     updated = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False, verbose_name="Published")
 
     class Meta:
         ordering = ['-created']
