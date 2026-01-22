@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% block title %}Reflexiones semanales{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <h2>Reflexiones semanales</h2>
+
+    {% for reflection in reflections %}
+        <article style="margin-bottom: 2rem;">
+            <h3>
+                <a href="{% url 'reflection_detail' reflection.slug %}">
+                    {{ reflection.title }}
+                </a>
+            </h3>
+            <p style="font-size: 0.9rem; color: #6b7280;">
+                {{ reflection.published_date }}
+            </p>
+        </article>
+    {% empty %}
+        <p>No hay reflexiones publicadas todavía.</p>
+    {% endfor %}
+</section>
+{% endblock %}

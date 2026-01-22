@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ reflection.title }}{% endblock %}
+
+{% block content %}
+<article class="page-section">
+    <h2>{{ reflection.title }}</h2>
+
+    <p style="font-size: 0.9rem; color: #6b7280;">
+        {{ reflection.published_date }}
+    </p>
+
+    <div style="margin-top: 2rem;">
+        {{ reflection.content|linebreaks }}
+    </div>
+</article>
+{% endblock %}
