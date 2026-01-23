@@ -189,3 +189,18 @@ main {
     margin-top: 2rem;
     font-size: 1.05rem;
 }
+
+.elders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.elder-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #c9a24d;
+}

@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<section class="page-section" style="max-width: 900px; margin: auto;">
+
+    <h2>Contacto</h2>
+
+    <p>
+        <strong>Teléfono:</strong><br>
+        📞 +52 55 1234 5678
+    </p>
+
+    <p>
+        <strong>Dirección:</strong><br>
+        📍 Calle Ejemplo 123, Col. Coyoacán, CDMX
+    </p>
+
+    <div style="margin-top: 2rem;">
+        <iframe
+            src="https://www.google.com/maps?q=Coyoacán,+Ciudad+de+México&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+</section>
+{% endblock %}

@@ -22,10 +22,10 @@
 
         <nav class="site-nav">
             <a href="/">Inicio</a>
-            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'core:nosotros' %}">Nosotros</a>
             <a href="{% url 'reflections:reflection_list' %}">Reflexiones</a>
             <a href="#">Sermones</a>
-            <a href="#">Contacto</a>
+            <a href="{% url 'core:contact' %}">Contacto</a>
         </nav>
     </div>
 </header>

@@ -15,3 +15,7 @@ def inicio(request):
 
 def nosotros(request):
     return render(request, "core/nosotros.html")
+
+
+def contact(request):
+    return render(request, 'core/contact.html')

@@ -20,4 +20,17 @@ Nosotros | Iglesia Presbiteriana Reformada Gethsemaní
         <li>Vida de iglesia centrada en Cristo</li>
     </ul>
 </section>
+<section class="page-section">
+    <h2>Consistorio</h2>
+
+    <div class="elders-grid">
+        {% for elder in elders %}
+            <div class="elder-card">
+                <img src="{{ elder.photo.url }}" alt="{{ elder.name }}">
+                <h3>{{ elder.name }}</h3>
+                <p>{{ elder.role }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
