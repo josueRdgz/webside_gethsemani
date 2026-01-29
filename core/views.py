@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from reflections.models import Reflection
+from .models import Elder
 
 
 def inicio(request):
@@ -14,7 +15,10 @@ def inicio(request):
 
 
 def nosotros(request):
-    return render(request, "core/nosotros.html")
+    elders = Elder.objects.all()
+    return render(request, "core/nosotros.html", {
+        "elders": elders
+    })
 
 
 def contact(request):
